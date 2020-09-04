@@ -1,11 +1,11 @@
 {
   "name": "dtiinit-diffusion-maps",
   "label": "VISTALAB: DTIINIT Diffusion Maps",
-  "description": "Generate diffusion maps (in NIfTI format), including Fractional Anisotropy (FA), Axial Diffusivity (AD), Mean Diffusivity (MD), and Radial Diffusivity (RD). The input to this Gear is a dtiInit archive, generated from either dtiInit, or as part of the AFQ processing pipeline.",
+  "description": "Generate diffusion maps, including Fractional Anisotropy (FA), Axial Diffusivity (AD), Mean Diffusivity (MD), and Radial Diffusivity (RD). The input to this Gear is a dtiInit archive, containing a 'dt6.mat' file. This archive is generated from either the dtiInit Flywheel Gear, or from the Flywheel Gear which executes the AFQ processing pipeline. Outputs are fa, md, rd, and ad files (in gzipped NIfTI format).",
   "maintainer": "Michael Perry <lmperry@stanford.edu>",
   "author": "Stanford VISTA Lab (vistalab.stanford.edu)",
   "url": "https://github.com/vistalab/vistasoft/wiki",
-  "source": "https://github.com/scitran-apps/dtiError/src",
+  "source": "https://github.com/vistalab/fw-gear-dtiinit-diffusion-maps",
   "license": "GPL-2.0",
   "flywheel": "0",
   "version": "1.0.0",
@@ -17,7 +17,7 @@
   },
   "inputs": {
     "dtiinit_archive": {
-      "description": "Output archive (.zip) from scitran/dtiinit gear run, or AFQ.",
+      "description": "Output archive (.zip) from dtiinit gear run, or AFQ.",
       "base": "file",
       "type": {
         "enum": [
