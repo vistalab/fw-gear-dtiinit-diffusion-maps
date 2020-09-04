@@ -15,7 +15,7 @@
       "category": "analysis"
     }
   },
-  "inputs": {q
+  "inputs": {
     "dtiinit_archive": {
       "base": "file",
       "description": "Output archive (.zip) from dtiinit gear run, or AFQ.",
