@@ -82,7 +82,7 @@ Removing container de36f2efba27 ...
 ```
 
 ### Developer's Corner: Compiling the Matlab Executable
-This Gear runs a Matlab Executable via the Matlab Compiler Runtime, which is build in the base image. __Note that the image uses MCR v92 (Matlabr2017a)__ - this MCR versionis used to maintain Docker image compatibility with the other tools generating the dtiInit_Archives.
+This Gear runs a Matlab Executable via the Matlab Compiler Runtime, which is build in the base image. __Note that the image uses MCR v92 (Matlabr2017a)__ - this MCR versions used to maintain Docker image compatibility with the other tools generating the dtiInit_Archives.
 
 If you find that need to make changes to the [source code](src/dtiinitDiffusionMaps_build.m) you will need to recompile the [executable](src/bin/run_dtiinitDiffusionMaps) and re-build the Docker image. 
 
