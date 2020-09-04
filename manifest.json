@@ -1,0 +1,35 @@
+{
+  "name": "dtiinit-diffusion-maps",
+  "label": "VISTALAB: DTIINIT Diffusion Maps",
+  "description": "Generate diffusion maps (in NIfTI format), including Fractional Anisotropy (FA), Axial Diffusivity (AD), Mean Diffusivity (MD), and Radial Diffusivity (RD). The input to this Gear is a dtiInit archive, generated from either dtiInit, or as part of the AFQ processing pipeline.",
+  "maintainer": "Michael Perry <lmperry@stanford.edu>",
+  "author": "Stanford VISTA Lab (vistalab.stanford.edu)",
+  "url": "https://github.com/vistalab/vistasoft/wiki",
+  "source": "https://github.com/scitran-apps/dtiError/src",
+  "license": "GPL-2.0",
+  "flywheel": "0",
+  "version": "1.0.0",
+  "custom": {
+    "gear-builder": {
+	"image": "vistalab/dtiinit-diffusion-maps:1.0.0",
+	"category": "analysis"
+      }
+  },
+  "inputs": {
+    "dtiinit_archive": {
+      "description": "Output archive (.zip) from scitran/dtiinit gear run, or AFQ.",
+      "base": "file",
+      "type": {
+        "enum": [
+          "archive"
+        ]
+      }
+    }
+  },
+  "config": {},
+  "environment": {
+    "LD_LIBRARY_PATH": "/opt/mcr/v92/runtime/glnxa64:/opt/mcr/v92/bin/glnxa64:/opt/mcr/v92/sys/os/glnxa64",
+    "XAPPLRESDIR": "XAPPLRESDIR"
+  },
+  "command": "/usr/local/bin/run_dtiinitDiffusionMaps.sh /opt/mcr/v92 /flywheel/v0/config.json"
+}
