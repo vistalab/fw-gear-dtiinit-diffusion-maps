@@ -63,6 +63,9 @@ for mm = 1:numel(maps)
     outFile = fullfile(output_dir, strcat(maps{mm}, '.nii.gz'));
     fprintf('Generating %s map ... ', maps{mm});
     dtiCreateMap(dt6File, maps{mm}, outFile, 1);
+    % Generate montages of each of the maps
+    imVol = niftiRead(outFile);
+    makeMontage(imVol.data, [], fullfile(output_dir, strcat(maps{mm}, '.png')));
 end
 
 disp('Complete!');
