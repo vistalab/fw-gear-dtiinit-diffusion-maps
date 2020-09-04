@@ -27,7 +27,7 @@ To run/test this Gear you will need to:
 3. Execute the Gear using the Flywheel CLI
 
 
-#### 2. Download the Flywheel CLI and login
+#### 1. Download the Flywheel CLI and login
 Visit: Flywheel for instruction on dowloading the CLIhttps://docs.flywheel.io/hc/en-us/articles/360008162214-Installing-the-Command-Line-Interface-CLI-
 
 Once you have that, you can login:
