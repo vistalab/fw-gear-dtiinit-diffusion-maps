@@ -11,14 +11,14 @@
   "version": "1.0.0",
   "custom": {
     "gear-builder": {
-	"image": "vistalab/dtiinit-diffusion-maps:1.0.0",
-	"category": "analysis"
-      }
+      "image": "vistalab/dtiinit-diffusion-maps:1.0.0",
+      "category": "analysis"
+    }
   },
-  "inputs": {
+  "inputs": {q
     "dtiinit_archive": {
-      "description": "Output archive (.zip) from dtiinit gear run, or AFQ.",
       "base": "file",
+      "description": "Output archive (.zip) from dtiinit gear run, or AFQ.",
       "type": {
         "enum": [
           "archive"
